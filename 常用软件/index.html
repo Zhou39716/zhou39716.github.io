@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="华为交换机基本配置命令详解, 笔记">
+    <meta name="keywords" content="常用软件, 笔记">
     <meta name="description" content="blog for me">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>华为交换机基本配置命令详解 | abrus.cc</title>
+    <title>常用软件 | abrus.cc</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -245,12 +245,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">华为交换机基本配置命令详解</h1>
+                    <h1 class="description center-align post-title">常用软件</h1>
                 </div>
             </div>
         </div>
@@ -366,8 +366,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                                <span class="chip bg-color">网络</span>
+                            <a href="/tags/soft/">
+                                <span class="chip bg-color">soft</span>
+                            </a>
+                        
+                            <a href="/tags/pc/">
+                                <span class="chip bg-color">pc</span>
                             </a>
                         
                     </div>
@@ -378,8 +382,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
-                                网络
+                            <a href="/categories/pc/" class="post-category">
+                                pc
                             </a>
                         
                     </div>
@@ -415,268 +419,60 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="华为交换机基本配置命令详解"><a href="#华为交换机基本配置命令详解" class="headerlink" title="华为交换机基本配置命令详解"></a>华为交换机基本配置命令详解</h1><h2 id="1、配置文件相关命令"><a href="#1、配置文件相关命令" class="headerlink" title="1、配置文件相关命令"></a>1、配置文件相关命令</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway]display current-configuration 显示当前生效的配置
-
-[Quidway]display saved-configuration显示flash中配置文件，即下次上电启动时所用的配置文件
-
-reset saved-configuration 檫除旧的配置文件
-
-reboot 交换机重启
-
-display version 显示系统版本信息<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="2、基本配置"><a href="#2、基本配置" class="headerlink" title="2、基本配置"></a>2、基本配置</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway]super password修改特权用户密码
-
-[Quidway]sysname 交换机命名
-
-[Quidway]interface ethernet1&#x2F;0&#x2F;1进入接口视图
-
-[Quidway]interface vlan1 进入接口视图
-
-[Quidway-Vlan-interfacex]ip address10.1.1.11255.255.0.0配置VLAN的IP地址 
-
-[Quidway]ip route-static 0.0.0.0 0.0.0.010.1.1.1 静态路由＝网关<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="3、telnet配置"><a href="#3、telnet配置" class="headerlink" title="3、telnet配置"></a>3、telnet配置</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway]user-interface vty 0 4 进入虚拟终端
-
-[S3026-ui-vty0-4]authentication-mode password 设置口令模式
-
-[S3026-ui-vty0-4]set authentication-mode password simplexmws123 设置口令
-
-[S3026-ui-vty0-4]user privilege level 3 用户级别<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="4、端口配置"><a href="#4、端口配置" class="headerlink" title="4、端口配置"></a>4、端口配置</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway-Ethernet1&#x2F;0&#x2F;1]duplex &#123;half|full|auto&#125; 配置端口工作状态
-
-[Quidway-Ethernet1&#x2F;0&#x2F;1]speed &#123;10|100|auto&#125; 配置端口工作速率
-
-[Quidway-Ethernet1&#x2F;0&#x2F;1]flow-control 配置端口流控
-
-[Quidway-Ethernet1&#x2F;0&#x2F;1]mdi &#123;across|auto|normal&#125; 配置端口平接扭接
-
-[Quidway-Ethernet1&#x2F;0&#x2F;1]port link-type &#123;trunk|access|hybrid&#125;设置端口工作模式 [Quidway-Ethernet1&#x2F;0&#x2F;1]undo shutdown激活端口
-
-[Quidway-Ethernet1&#x2F;0&#x2F;2]quit 退出系统视图<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="5、链路聚合配置"><a href="#5、链路聚合配置" class="headerlink" title="5、链路聚合配置"></a>5、链路聚合配置</h2><pre class="line-numbers language-none"><code class="language-none">[DeviceA] link-aggregation group 1 mode manual 创建手工聚合组1
-
-[Qw_A] interface ethernet 1&#x2F;0&#x2F;1将以太网端口Ethernet1&#x2F;0&#x2F;1加入聚合组1
-[Qw_A-Ethernet1&#x2F;0&#x2F;1] port link-aggregation group 1
-
-[Qw_A-Ethernet1&#x2F;0&#x2F;1] interface ethernet 1&#x2F;0&#x2F;2将以太网端口Ethernet1&#x2F;0&#x2F;1加入聚合组1
-
-[Qw_A-Ethernet1&#x2F;0&#x2F;2] port link-aggregation group 1
-
-[Qw_A] link-aggregation group 1 service-type tunnel #在手工聚合组的基础上创建tunnel业务环回组。
-
-[Qw_A] interface ethernet 1&#x2F;0&#x2F;1将以太网端口Ethernet1&#x2F;0&#x2F;1加入业务环回组。
-
-[Qw_A-Ethernet1&#x2F;0&#x2F;1] undo stp
-
-[Qw_A-Ethernet1&#x2F;0&#x2F;1] port link-aggregation group 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="6、端口镜像"><a href="#6、端口镜像" class="headerlink" title="6、端口镜像"></a>6、端口镜像</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway]monitor-port 指定镜像端口
-
-[Quidway]port mirror 指定被镜像端口
-
-[Quidway]port mirror int_list observing-port int_type int_num 指定镜像和被镜像<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="7、VLAN配置"><a href="#7、VLAN配置" class="headerlink" title="7、VLAN配置"></a>7、VLAN配置</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway]vlan4 创建VLAN
-
-[Quidway-vlan4]port ethernet1&#x2F;0&#x2F;1 to ethernet1&#x2F;0&#x2F;4 在VLAN中增加端口<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="①-配置基于access的VLAN"><a href="#①-配置基于access的VLAN" class="headerlink" title="① 配置基于access的VLAN"></a>① 配置基于access的VLAN</h3><pre class="line-numbers language-none"><code class="language-none">[Quidway-Ethernet1&#x2F;0&#x2F;2]port access vlan4 当前端口加入到VLAN 
-注意：缺省情况下，端口的链路类型为Access类型，所有Access端口均属于且只属于VLAN1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h3 id="②-配置基于trunk的VLAN"><a href="#②-配置基于trunk的VLAN" class="headerlink" title="② 配置基于trunk的VLAN"></a>② 配置基于trunk的VLAN</h3><pre class="line-numbers language-none"><code class="language-none">[Quidway-Ethernet1&#x2F;0&#x2F;24]port link-type trunk设置当前端口为trunk 
-
-[Quidway-Ethernet1&#x2F;0&#x2F;24]port trunk permit vlan &#123;ID|All&#125;设trunk允许的VLAN 
-注意：所有端口缺省情况下都是允许VLAN1的报文通过的
-
-[Quidway-Ethernet1&#x2F;0&#x2F;2]port trunk pvid vlan 34 设置trunk端口的PVID<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="③-配置基于Hybrid端口的VLAN"><a href="#③-配置基于Hybrid端口的VLAN" class="headerlink" title="③ 配置基于Hybrid端口的VLAN"></a>③ 配置基于Hybrid端口的VLAN</h3><pre class="line-numbers language-none"><code class="language-none">[Quidway-Ethernet1&#x2F;0&#x2F;2]port link-type hybrid配置端口的链路类型为Hybrid类型
-
-[Quidway-Ethernet1&#x2F;0&#x2F;2]port hybrid vlan vlan-id-list &#123; tagged |
-untagged &#125;允许指定的VLAN通过当前Hybrid端口
-
-注意：缺省情况下，所有Hybrid端口只允许VLAN1通过
-
-[Quidway-Ethernet1&#x2F;0&#x2F;2]port hybrid pvid vlan vlan-id设置Hybrid端口的缺省VLAN
-
-注意：缺省情况下，Hybrid端口的缺省VLAN为VLAN1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="④-VLAN描述"><a href="#④-VLAN描述" class="headerlink" title="④ VLAN描述"></a>④ VLAN描述</h3><pre class="line-numbers language-none"><code class="language-none">[Quidway]description string 指定VLAN描述字符
-
-[Quidway]undodescription 删除VLAN描述字符 
-
-[Quidway]display vlan [vlan_id] 查看VLAN设置 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="⑤-私有VLAN配置"><a href="#⑤-私有VLAN配置" class="headerlink" title="⑤ 私有VLAN配置"></a>⑤ 私有VLAN配置</h3><pre class="line-numbers language-none"><code class="language-none">[Qw_A-vlanx]isolate-user-vlan enable 设置主vlan
-
-[Qw_A]Isolate-user-vlan secondary 设置主vlan包括的子vlan
-
-[Quidway-Ethernet1&#x2F;0&#x2F;2]port hybrid pvid vlan 设置vlan的pvid
-
-[Quidway-Ethernet1&#x2F;0&#x2F;2]port hybrid pvid 删除vlan的pvid
-
-[Quidway-Ethernet1&#x2F;0&#x2F;2]port hybrid vlan vlan_id_list untagged 设置无标识的vlan
-
-如果包的vlan id与PVId一致，则去掉vlan信息.默认PVID&#x3D;1。
-所以设置PVID为所属vlan id,设置可以互通的vlan为untagged. <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="8、STP配置"><a href="#8、STP配置" class="headerlink" title="8、STP配置"></a>8、STP配置</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway]stp &#123;enable|disable&#125;设置生成树,默认关闭 
-
-[Quidway]stpmode rstp设置生成树模式为rstp 
-
-[Quidway]stp priority8192 设置交换机的优先级 
-
-[Quidway]stp root &#123;primary|secondary&#125; 设置为根或根的备份
-
-[Quidway-Ethernet0&#x2F;1]stp cost 200 设置交换机端口的花费 MSTP配置：
-
-#配置MST域名为info，MSTP修订级别为1，VLAN映射关系为VLAN2～VLAN10映射到生成树实例1上，VLAN20～VLAN30映射生成树实例2上。 system-view
-
-[Sysname] stp region-configuration
-
-[Sysname-mst-region] region-name info
-
-[Sysname-mst-region] instance 1 vlan 2 to 10
-
-[Sysname-mst-region] instance 2 vlan 20 to 30 
-
-[Sysname-mst-region] revision-level 1
-
-[Sysname-mst-region] active region-configuration <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="9、MAC地址表的操作"><a href="#9、MAC地址表的操作" class="headerlink" title="9、MAC地址表的操作"></a>9、MAC地址表的操作</h2><h3 id="①-在系统视图下添加MAC地址表项"><a href="#①-在系统视图下添加MAC地址表项" class="headerlink" title="① 在系统视图下添加MAC地址表项"></a>① 在系统视图下添加MAC地址表项</h3><pre class="line-numbers language-none"><code class="language-none">[Quidway]mac-address &#123; static | dynamic | blackhole &#125;
-mac-address interface interface-type interface-number vlan vlan-id；添加MAC地址表项 在添加MAC地址表项时，命令中interface参数指定的端口必须属于vlan参数指定的VLAN，否则将添加失败。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>如果vlan参数指定的VLAN是动态VLAN，在添加静态MAC地址之后，会自动变为静态VLAN。</p>
-<h3 id="②-在以太网端口视图下添加MAC地址表项"><a href="#②-在以太网端口视图下添加MAC地址表项" class="headerlink" title="② 在以太网端口视图下添加MAC地址表项"></a>② 在以太网端口视图下添加MAC地址表项</h3><pre class="line-numbers language-none"><code class="language-none">[Quidway-Ethernet1&#x2F;0&#x2F;2]mac-address &#123; static | dynamic | blackhole &#125; mac-address vlan vlan-id<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>在添加MAC地址表项时，当前的端口必须属于命令中vlan参数指定的VLAN，否则将添加失败；</p>
-<p>如果vlan参数指定的VLAN是动态VLAN，在添加静态MAC地址之后，会自动变为静态VLAN。</p>
-<pre class="line-numbers language-none"><code class="language-none">[Quidway]mac-address timer &#123; aging age | no-aging &#125;设置MAC地址表项的老化时间
-
-注意：缺省情况下，MAC地址表项的老化时间为300秒，使用参数no-aging时表示不对MAC地址表项进行老化。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="③-MAC地址老化时间的配置对所有端口都生效，但地址老化功能只对动态的（学习到的或者用户配置可老化的）MAC地址表项起作用。"><a href="#③-MAC地址老化时间的配置对所有端口都生效，但地址老化功能只对动态的（学习到的或者用户配置可老化的）MAC地址表项起作用。" class="headerlink" title="③ MAC地址老化时间的配置对所有端口都生效，但地址老化功能只对动态的（学习到的或者用户配置可老化的）MAC地址表项起作用。"></a>③ MAC地址老化时间的配置对所有端口都生效，但地址老化功能只对动态的（学习到的或者用户配置可老化的）MAC地址表项起作用。</h3><pre class="line-numbers language-none"><code class="language-none">[Quidway-Ethernet1&#x2F;0&#x2F;2]mac-address max-mac-count count设置端口最多可以学习到的MAC地址数量；<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>注意：缺省情况下，没有配置对端口学习MAC地址数量的限制。反之，如果端口启动了MAC地址认证和端口安全功能，则不能配置该端口的最大MAC地址学习个数。</p>
-<pre class="line-numbers language-none"><code class="language-none">[Quidway-Ethernet1&#x2F;0&#x2F;2]port-mac start-mac-address配置以太网端口MAC地址的起始值<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">在缺省情况下，E126&#x2F;E126A交换机的以太网端口是没有配置MAC地址的，因此当交换机在发送二层协议报文（例如STP）时，由于无法取用发送端口的MAC地址，将使用该协议预置的MAC地址作为源地址填充到报文中进行发送。在实际组网中，由于多台设备都使用相同的源MAC地址发送二层协议报文，会造成在某台设备的不同端口学习到相同MAC地址的情况，可能会对MAC地址表的维护产生影响。
-[Quidway]display mac-address                 显示地址表信息 
-
-[Quidway]display mac-address aging-time         显示地址表动态表项的老化时间 
-
-[Quidway]display port-mac            显示用户配置的以太网端口MAC地址的起始值 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="10、GVRP配置"><a href="#10、GVRP配置" class="headerlink" title="10、GVRP配置"></a>10、GVRP配置</h2><pre class="line-numbers language-none"><code class="language-none">[Qw_A] gvrp                 开启全局GVRP 
-
-[Qw_A-Ethernet1&#x2F;0&#x2F;1] gvrp     在以太网端口Ethernet1&#x2F;0&#x2F;1上开启GVRP 
-
-[Qw_A-Ethernet1&#x2F;0&#x2F;1] gvrp registration &#123; fixed | forbidden | normal &#125;   
-                                  配置GVRP端口注册模式 ，缺省为normal。
-[Qw_A] display garp statistics [ interface interface-list ]    显示GARP统计信息息
-
-[Qw_A] display garp timer [ interface interface-list ]        显示GARP定时器的值 
-
-[Qw_A] display gvrp statistics [ interface interface-list ]    显示GVRP统计信息 
-
-[Qw_A] display gvrp status                       显示GVRP的全局状态信息 
-
-[Qw_A] display gvrp statusreset garp statistics [ interface interface-list ] 清除GARP统计 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="11、DLDP配置"><a href="#11、DLDP配置" class="headerlink" title="11、DLDP配置"></a>11、DLDP配置</h2><pre class="line-numbers language-none"><code class="language-none">[Qw_A] interface gigabitethernet 1&#x2F;1&#x2F;1  
-
-[Qw_A-GigabitEthernet1&#x2F;1&#x2F;1] duplex full       配置端口工作在强制全双工模式 
-
-[Qw_A-GigabitEthernet1&#x2F;1&#x2F;1] speed 1000       速率为1000Mbits&#x2F;s 
-
-[Qw_A] dldp enable     全局开启DLDP。
-
-[Qw_A] dldp interval 15                     设置发送DLDP报文的时间间隔为15秒。
-
-[Qw_A]  dldp work-mode &#123; enhance | normal &#125;    配置DLDP协议的工作模式为加强模式。
-缺省为normal。
-
-[Qw_A] dldp unidirectional-shutdown  &#123; auto | manual &#125;     配置DLDP单向链路操作模式为自动模式。
- 缺省为auto 
-
-[Qw_A] display dldp 1          查看DLDP状态。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>① 当光纤交叉连接时，可能有两个或三个端口处于Disable状态，剩余端口处于Inactive状态。<br>② 当光纤一端连接正确，一端未连接时： <br>如果DLDP的工作模式为normal，则有收光的一端处于Advertisement状态，没有收光的一端处于Inactive状态。<br>如果DLDP的工作模式为enhance，则有收光的一端处于Disable状态，没有收光的一端处于Inactive状态。<br>③ dldp reset命令在全局下可以重置所有端口的DLDP状态，在接口下可以充值该端口的DLDP状态 </p>
-<h2 id="12、端口隔离配置"><a href="#12、端口隔离配置" class="headerlink" title="12、端口隔离配置"></a>12、端口隔离配置</h2><p>① 通过端口隔离特性，用户可以将需要进行控制的端口加入到一个隔离组中，实现隔离组中的端口<br>之间二层、三层数据的隔离，既增强了网络的安全性，也为用户提供了灵活的组网方案。</p>
-<pre class="line-numbers language-none"><code class="language-none">[Sysname] interface ethernet1&#x2F;0&#x2F;2   将以太网端口Ethernet1&#x2F;0&#x2F;2加入隔离组。
-
-[Sysname-Ethernet1&#x2F;0&#x2F;2] port isolate 
-
-[Sysname] display isolate port      显示隔离组中的端口信息 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>② 配置隔离组后，只有隔离组内各个端口之间的报文不能互通，隔离组内端口与隔离组外端口以及隔离组外端口之间的通信不会受到影响。<br>③ 端口隔离特性与以太网端口所属的VLAN无关。<br>④ 当汇聚组中的某个端口加入或离开隔离组后，本设备中同一汇聚组内的其它端口，均会自动加入或离开该隔离组。<br>⑤ 对于既处于某个聚合组又处于某个隔离组的一组端口，其中的一个端口离开聚合组时不会影响其他端口，即其他端口仍将处于原聚合组和原隔离组中。<br>⑥ 如果某个聚合组中的端口同时属于某个隔离组，当在系统视图下直接删除该聚合组后，该聚合组中的端口仍将处于该隔离组中。<br>⑦ 当隔离组中的某个端口加入聚合组时，该聚合组中的所有端口，会自动加入隔离组中。</p>
-<h2 id="13、端口安全配置"><a href="#13、端口安全配置" class="headerlink" title="13、端口安全配置"></a>13、端口安全配置</h2><pre class="line-numbers language-none"><code class="language-none">[Switch] port-security enable     启动端口安全功能 
-
-[Switch] interface Ethernet 1&#x2F;0&#x2F;1  进入以太网Ethernet1&#x2F;0&#x2F;1端口视图 
-
-[Switch-Ethernet1&#x2F;0&#x2F;1] port-security max-mac-count 80   
-                                    设置端口允许接入的最大MAC地址数为80 
-[Switch-Ethernet1&#x2F;0&#x2F;1] port-security port-mode autolearn  配置端口的安全模式为autolearn 
-
-[Switch-Ethernet1&#x2F;0&#x2F;1] mac-address security 0001-0002-0003 vlan 1    
- 将Host 的MAC地址0001-0002-0003作为Security MAC添加到VLAN 1中 
-
-[Switch-Ethernet1&#x2F;0&#x2F;1] port-security intrusion-mode disableport-temporarily    
-         设置Intrusion Protection特性被触发后，暂时关闭该端口 
-
-[Switch]port-security timer disableport 30       关闭时间为30秒。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="14、端口绑定配置"><a href="#14、端口绑定配置" class="headerlink" title="14、端口绑定配置"></a>14、端口绑定配置</h2><p>通过端口绑定特性，网络管理员可以将用户的MAC地址和IP地址绑定到指定的端口上。进行绑定操作后，交换机只对从该端口收到的指定MAC地址和IP地址的用户发出的报文进行转发，提高了系统的安全性，增强了对网络安全的监控。</p>
-<pre class="line-numbers language-none"><code class="language-none">[Qw_A-Ethernet1&#x2F;0&#x2F;1] am user-bind mac-addr 0001-0002-0003 ip-addr 10.12.1.1 
-将Host 1的MAC地址和IP地址绑定到Ethernet1&#x2F;0&#x2F;1
-端口。
-有的交换机上绑定的配置不一样 
-
-[Qw_A] interface ethernet 1&#x2F;0&#x2F;2 
-
-[Qw_A-Ethernet1&#x2F;0&#x2F;2] user-bind ip-address 192.168.0.3 mac-address 0001-0203-0405 端口过滤配置 
-
-[Qw_A] interface ethernet1&#x2F;0&#x2F;1      配置端口Ethernet1&#x2F;0&#x2F;1的端口过滤功能。
-
-[Qw_A-Ethernet1&#x2F;0&#x2F;1] ip check source ip-address mac-address 
-
-[Qw_A] dhcp-snooping             开启DHCP Snooping功能。
-
-[Qw_A] interface ethernet1&#x2F;0&#x2F;2   
-设置与DHCP服务器相连的端口Ethernet1&#x2F;0&#x2F;2为信任端口。
-
-[Qw_A-Ethernet1&#x2F;0&#x2F;2] dhcp-snooping trust 
-在端口Ethernet1&#x2F;0&#x2F;1上启用IP过滤功能，防止客户端使用伪造的不同源IP地址对服务器进行攻击 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="15、BFD配置"><a href="#15、BFD配置" class="headerlink" title="15、BFD配置"></a>15、BFD配置</h2><p>Qw_A、Qw_B、Qw_C相互可达，在Qw_A上配置静态路由可以到达Qw_C，并使能BFD检测功能。<br>① 在Qw_A上配置静态路由，并使能BFD检测功能，通过BFD echo报文方式实现BFD功能。</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;Qw_A&gt; system-view 
-
-[Qw_A] bfd echo-source-ip 123.1.1.1 
-
-[Qw_A] interface vlan-interface 10 
-
-[Qw_A-vlan-interface10] bfd min-echo-receive-interval 300 
-
-[Qw_A-vlan-interface10] bfd detect-multiplier 7   
-
-[Qw_A-vlan-interface10] quit 
-
-[Qw_A] ip route-static 120.1.1.1 24 10.1.1.100 bfd echo-packet <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>② 在Qw_A上打开BFD功能调试信息开关。</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;Qw_A&gt; debugging bfd event 
-
-&lt;Qw_A&gt; debugging bfd scm 
-
-&lt;Qw_A&gt; terminal debugging <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>③ 在Qw_A上可以打开BFD功能调试信息开关，断开Hub和Qw_B之间的链路，验证配置结果。验证结果显示， <br>④ Qw_A能够快速感知Qw_A与Qw_B之间链路的变化。</p>
-<h2 id="16、QinQ配置"><a href="#16、QinQ配置" class="headerlink" title="16、QinQ配置"></a>16、QinQ配置</h2><p>Provider A、Provider B之间通过Trunk端口连接，Provider A属于运营商网络的VLAN1000，Provider B属于运营商网络的VLAN2000。<br>Provider A和Provider B之间，运营商采用其他厂商的设备，TPID值为0x8200。<br>希望配置完成后达到下列要求： <br>Customer A的VLAN10的报文可以和Customer B的VLAN10的报文经过运营商网络的VLAN1000转发后互通；Customer A的VLAN20的报文可以 <br>和Customer C的VLAN20的报文经过运营商网络的VLAN2000转发后互通。</p>
+                <h1 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h1><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="left">介绍</th>
+<th align="center">下载地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Motrix</td>
+<td align="left">一款很好用的多线程下载软件</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://motrix.app/">https://motrix.app/</a></td>
+</tr>
+<tr>
+<td align="center">7zip</td>
+<td align="left">体积下，无广告的压缩解压软件</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://sparanoid.com/lab/7z/">https://sparanoid.com/lab/7z/</a></td>
+</tr>
+<tr>
+<td align="center">Violentmonkey</td>
+<td align="left">一款好用的浏览器扩展工具</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://violentmonkey.github.io/">https://violentmonkey.github.io/</a></td>
+</tr>
+<tr>
+<td align="center">Adobe软件</td>
+<td align="left">全系列，解压密码:  @vposy</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1_rP3F1pgi598vR8hDDJOEA">度盘链接</a> 提取码：xc91</td>
+</tr>
+<tr>
+<td align="center">CAD2004-2020</td>
+<td align="left"></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1PCEG_IoRYNyI4piuyAkIig">度盘链接</a> 提取码：4ivk</td>
+</tr>
+<tr>
+<td align="center">vc运行库</td>
+<td align="left">VC2005-2019</td>
+<td align="center"><a target="_blank" rel="noopener" href="http://yd.shanbotv.com:8686/lmsrc/scku/Scku.exe">下载地址</a></td>
+</tr>
+<tr>
+<td align="center">.net 3.5</td>
+<td align="left"></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://xa189cloud.oos-snxa.ctyunapi.cn/3e180290-5006-4a54-8358-b46f44f6114e?response-content-disposition=attachment;filename=%22NETFramework2.0_3.0_3.5x862014511.zip%22&x-amz-CLIENTNETWORK=UNKNOWN&x-amz-CLOUDTYPEIN=PERSON&x-amz-CLIENTTYPEIN=WEB&Signature=Dz20nvfjOXVwaceKftrsE1M4N+Q=&AWSAccessKeyId=c947570364056574cccc&Expires=1620652348&x-amz-limitrate=128000&x-amz-FSIZE=38499930&x-amz-UID=208990395&x-amz-UFID=81434112270166334">下载地址</a></td>
+</tr>
+<tr>
+<td align="center">.net4.5</td>
+<td align="left"></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://xa189cloud.oos-snxa.ctyunapi.cn/e845a8b1-1be6-4ca8-9214-178ef7cf0d4f?response-content-disposition=attachment;filename=%22NETFramework_4.5.2ALL_2014511.zip%22&x-amz-CLIENTNETWORK=UNKNOWN&x-amz-CLOUDTYPEIN=PERSON&x-amz-CLIENTTYPEIN=WEB&Signature=xk88bq/kYfFSut4YyOCYDajLdIo=&AWSAccessKeyId=c947570364056574cccc&Expires=1620652550&x-amz-limitrate=128000&x-amz-FSIZE=78060486&x-amz-UID=208990395&x-amz-UFID=11306112736824049">下载地址</a></td>
+</tr>
+<tr>
+<td align="center">todesk</td>
+<td align="left">一款好用免费的远程软件</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.todesk.com/">https://www.todesk.com</a></td>
+</tr>
+</tbody></table>
 
                 
             </div>
@@ -703,7 +499,7 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhou39716.github.io/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/">http://zhou39716.github.io/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/</a>
+                    <a href="http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/">http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -741,8 +537,12 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                                    <span class="chip bg-color">网络</span>
+                                <a href="/tags/soft/">
+                                    <span class="chip bg-color">soft</span>
+                                </a>
+                            
+                                <a href="/tags/pc/">
+                                    <span class="chip bg-color">pc</span>
                                 </a>
                             
                         </div>
@@ -912,9 +712,10 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/">
                     <div class="card-image">
@@ -932,9 +733,9 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -947,6 +748,7 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -969,13 +771,13 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/%E5%8D%8E%E4%B8%BANAT/">
+                <a href="/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="华为NAT">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="华为交换机基本配置命令详解">
                         
-                        <span class="card-title">华为NAT</span>
+                        <span class="card-title">华为交换机基本配置命令详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

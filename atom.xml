@@ -6,7 +6,7 @@
   <link href="http://zhou39716.github.io/atom.xml" rel="self"/>
   
   <link href="http://zhou39716.github.io/"/>
-  <updated>2021-05-10T10:15:41.518Z</updated>
+  <updated>2021-05-10T13:42:43.557Z</updated>
   <id>http://zhou39716.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常用软件</title>
+    <link href="http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/"/>
+    <id>http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</id>
+    <published>2021-05-10T13:29:34.000Z</published>
+    <updated>2021-05-10T13:42:43.557Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h1><table><thead><tr><th align="center">名称</th><th align="left">介绍</th><th align="center">下载地址</th></tr></thead><tbody><tr><td align="center">Motrix</td><td align="left">一款很好用的多线程下载软件</td><td align="center"><a href="https://motrix.app/">https://motrix.app/</a></td></tr><tr><td align="center">7zip</td><td align="left">体积下，无广告的压缩解压软件</td><td align="center"><a href="https://sparanoid.com/lab/7z/">https://sparanoid.com/lab/7z/</a></td></tr><tr><td align="center">Violentmonkey</td><td align="left">一款好用的浏览器扩展工具</td><td align="center"><a href="https://violentmonkey.github.io/">https://violentmonkey.github.io/</a></td></tr><tr><td align="center">Adobe软件</td><td align="left">全系列，解压密码:  @vposy</td><td align="center"><a href="https://pan.baidu.com/s/1_rP3F1pgi598vR8hDDJOEA">度盘链接</a> 提取码：xc91</td></tr><tr><td align="center">CAD2004-2020</td><td align="left"></td><td align="center"><a href="https://pan.baidu.com/s/1PCEG_IoRYNyI4piuyAkIig">度盘链接</a> 提取码：4ivk</td></tr><tr><td align="center">vc运行库</td><td align="left">VC2005-2019</td><td align="center"><a href="http://yd.shanbotv.com:8686/lmsrc/scku/Scku.exe">下载地址</a></td></tr><tr><td align="center">.net 3.5</td><td align="left"></td><td align="center"><a href="https://xa189cloud.oos-snxa.ctyunapi.cn/3e180290-5006-4a54-8358-b46f44f6114e?response-content-disposition=attachment;filename=%22NETFramework2.0_3.0_3.5x862014511.zip%22&x-amz-CLIENTNETWORK=UNKNOWN&x-amz-CLOUDTYPEIN=PERSON&x-amz-CLIENTTYPEIN=WEB&Signature=Dz20nvfjOXVwaceKftrsE1M4N+Q=&AWSAccessKeyId=c947570364056574cccc&Expires=1620652348&x-amz-limitrate=128000&x-amz-FSIZE=38499930&x-amz-UID=208990395&x-amz-UFID=81434112270166334">下载地址</a></td></tr><tr><td align="center">.net4.5</td><td align="left"></td><td align="center"><a href="https://xa189cloud.oos-snxa.ctyunapi.cn/e845a8b1-1be6-4ca8-9214-178ef7cf0d4f?response-content-disposition=attachment;filename=%22NETFramework_4.5.2ALL_2014511.zip%22&x-amz-CLIENTNETWORK=UNKNOWN&x-amz-CLOUDTYPEIN=PERSON&x-amz-CLIENTTYPEIN=WEB&Signature=xk88bq/kYfFSut4YyOCYDajLdIo=&AWSAccessKeyId=c947570364056574cccc&Expires=1620652550&x-amz-limitrate=128000&x-amz-FSIZE=78060486&x-amz-UID=208990395&x-amz-UFID=11306112736824049">下载地址</a></td></tr><tr><td align="center">todesk</td><td align="left">一款好用免费的远程软件</td><td align="center"><a href="https://www.todesk.com/">https://www.todesk.com</a></td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;常用软件&quot;&gt;&lt;a href=&quot;#常用软件&quot; class=&quot;headerlink&quot; title=&quot;常用软件&quot;&gt;&lt;/a&gt;常用软件&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;名称&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="pc" scheme="http://zhou39716.github.io/categories/pc/"/>
+    
+    
+    <category term="soft" scheme="http://zhou39716.github.io/tags/soft/"/>
+    
+    <category term="pc" scheme="http://zhou39716.github.io/tags/pc/"/>
+    
+  </entry>
   
   <entry>
     <title>华为交换机基本配置命令详解</title>
