@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, 笔记">
+    <meta name="keywords" content="常用命令, 笔记">
     <meta name="description" content="blog for me">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | ben</title>
+    <title>常用命令 | ben</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -267,12 +267,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">tags</h1>
+                    <h1 class="description center-align post-title">常用命令</h1>
                 </div>
             </div>
         </div>
@@ -386,12 +386,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/network/">
+                                <span class="chip bg-color">network</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
+                                网络
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -400,7 +413,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-01-23
+                    2021-05-10
                 </div>
                 
 
@@ -424,7 +437,64 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="ftp上传下载配置"><a href="#ftp上传下载配置" class="headerlink" title="ftp上传下载配置"></a>ftp上传下载配置</h2><pre class="line-numbers language-none"><code class="language-none">ftp ftp服务器地址
+输入用户名
+密码
+
+bin &#x2F;&#x2F;bin模式
+put 文件名 &#x2F;&#x2F;上传文件到ftp服务器
+get 文件名 &#x2F;&#x2F;从ftp服务器下载文件
+
+startup saved-configuration flash:&#x2F;文件名  
+&#x2F;&#x2F;下次启动加载的配置文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="三层交换"><a href="#三层交换" class="headerlink" title="三层交换"></a>三层交换</h2><pre class="line-numbers language-none"><code class="language-none">先创建vlan
+vlan batch 20 30 40
+
+将接口设置类型trunk\acess
+int g0&#x2F;0&#x2F;1
+port link type trunk
+port trunk allow pass vlan 20 30 40    &#x2F;&#x2F;trunk接口允许通过那些vlan
+
+int g0&#x2F;0&#x2F;2
+port link type acess
+port defult vlan 40     &#x2F;&#x2F;acess接口属于哪个vlan
+
+int g0&#x2F;0&#x2F;3
+vlanif 20                               &#x2F;&#x2F;配置vlani接口ip  vlanif接口id与vlan id 一致
+ip address  10.10.10.99 24      &#x2F;&#x2F; 外网
+
+vlanif 30
+ip address 30.30.30.55 24     &#x2F;&#x2F;专网
+
+vlan if 40 
+ip address 40.40.40.1 24    &#x2F;&#x2F;内网
+
+ip route-static 11.11.11.0  24  30.30.30.55    &#x2F;&#x2F;访问专网路线的走vlan if 30
+ip route-static  0.0.0.0 0.0.0.0 10.10.10.99   &#x2F;&#x2F;默认路由走外网 vlan if 20
+
+dis ip routing-table  &#x2F;&#x2F;查看路由表<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="防火墙常用配置"><a href="#防火墙常用配置" class="headerlink" title="防火墙常用配置"></a>防火墙常用配置</h2><pre class="line-numbers language-none"><code class="language-none">先配置入方向和出方向接口的ip
+
+fire zone trust &#x2F;&#x2F;配置安全区域（内网）
+add int g0&#x2F;0&#x2F;1
+
+fire zone untrust &#x2F;&#x2F;配置非安全区域（外网）
+add int g0&#x2F;0&#x2F;3
+
+security-policy &#x2F;&#x2F;配置安全策略trust-untrust
+rule name outside
+source zone trust  
+destination zone untrust
+action permit &#x2F;&#x2F;放行
+
+最后注意是否有回程路由，
+
+查看会话表
+
+ip route-static 内网ip段 下一跳入方向的对端Ip<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
                 
             </div>
             <hr/>
@@ -450,7 +520,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhou39716.github.io/tags/index.html">http://zhou39716.github.io/tags/index.html</a>
+                    <a href="http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -487,7 +557,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/network/">
+                                    <span class="chip bg-color">network</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -655,18 +729,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/%E5%8D%8E%E4%B8%BANAT/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="tags">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="华为NAT">
                         
-                        <span class="card-title">tags</span>
+                        <span class="card-title">华为NAT</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -676,18 +749,33 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-01-23
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-10
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            ben
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    网络
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/network/">
+                        <span class="chip bg-color">network</span>
+                    </a>
+                    
+                    <a href="/tags/pc/">
+                        <span class="chip bg-color">pc</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -695,16 +783,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="tags">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="华为交换机基本配置命令详解">
                         
-                        <span class="card-title">tags</span>
+                        <span class="card-title">华为交换机基本配置命令详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -715,17 +803,28 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-01-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-10
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            ben
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    网络
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/network/">
+                        <span class="chip bg-color">network</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
