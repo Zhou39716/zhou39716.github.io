@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>ben</title>
+  <title>abrus.cc</title>
   
-  <subtitle>ben</subtitle>
-  <link href="http://zhou39716.github.io/atom.xml" rel="self"/>
+  <subtitle>abrus</subtitle>
+  <link href="https://abrus.cc/atom.xml" rel="self"/>
   
-  <link href="http://zhou39716.github.io/"/>
+  <link href="https://abrus.cc/"/>
   <updated>2021-05-10T10:15:28.509Z</updated>
-  <id>http://zhou39716.github.io/</id>
+  <id>https://abrus.cc/</id>
   
   <author>
-    <name>ben</name>
+    <name>abrus</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>华为NAT</title>
-    <link href="http://zhou39716.github.io/%E5%8D%8E%E4%B8%BANAT/"/>
-    <id>http://zhou39716.github.io/%E5%8D%8E%E4%B8%BANAT/</id>
+    <link href="https://abrus.cc/%E5%8D%8E%E4%B8%BANAT/"/>
+    <id>https://abrus.cc/%E5%8D%8E%E4%B8%BANAT/</id>
     <published>2021-05-10T05:21:24.000Z</published>
     <updated>2021-05-10T10:15:28.509Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="网络" scheme="http://zhou39716.github.io/categories/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="https://abrus.cc/categories/%E7%BD%91%E7%BB%9C/"/>
     
     
-    <category term="网络" scheme="http://zhou39716.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="https://abrus.cc/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>常用命令</title>
-    <link href="http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <link href="https://abrus.cc/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://abrus.cc/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
     <published>2021-05-10T05:21:24.000Z</published>
     <updated>2021-05-10T10:15:09.880Z</updated>
     
@@ -58,17 +58,17 @@
     
     
     
-    <category term="网络" scheme="http://zhou39716.github.io/categories/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="https://abrus.cc/categories/%E7%BD%91%E7%BB%9C/"/>
     
     
-    <category term="网络" scheme="http://zhou39716.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="https://abrus.cc/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>华为交换机基本配置命令详解</title>
-    <link href="http://zhou39716.github.io/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://zhou39716.github.io/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/</id>
+    <link href="https://abrus.cc/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://abrus.cc/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/</id>
     <published>2021-05-10T05:21:24.000Z</published>
     <updated>2021-05-10T10:15:41.518Z</updated>
     
@@ -82,17 +82,17 @@
     
     
     
-    <category term="网络" scheme="http://zhou39716.github.io/categories/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="https://abrus.cc/categories/%E7%BD%91%E7%BB%9C/"/>
     
     
-    <category term="网络" scheme="http://zhou39716.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="https://abrus.cc/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>ACL命令相关知识</title>
-    <link href="http://zhou39716.github.io/ACL%E7%9B%B8%E5%85%B3/"/>
-    <id>http://zhou39716.github.io/ACL%E7%9B%B8%E5%85%B3/</id>
+    <link href="https://abrus.cc/ACL%E7%9B%B8%E5%85%B3/"/>
+    <id>https://abrus.cc/ACL%E7%9B%B8%E5%85%B3/</id>
     <published>2020-01-09T08:44:00.000Z</published>
     <updated>2021-05-10T09:45:17.841Z</updated>
     
@@ -107,10 +107,10 @@
     
     
     
-    <category term="网络" scheme="http://zhou39716.github.io/categories/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="https://abrus.cc/categories/%E7%BD%91%E7%BB%9C/"/>
     
     
-    <category term="网络" scheme="http://zhou39716.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="https://abrus.cc/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
