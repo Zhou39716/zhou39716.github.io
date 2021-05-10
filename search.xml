@@ -67,6 +67,33 @@
     </entry>
     
     
+    
+    <entry>
+      <title>基于Hexo的matery主题搭建博客</title>
+      <link href="ceshi/"/>
+      <url>ceshi/</url>
+      
+        <content type="html"><![CDATA[<p>————————————————</p><p>本条测试用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> blog </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>

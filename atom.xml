@@ -134,4 +134,32 @@ tags: network
     
   </entry>
   
+  <entry>
+    <title>基于Hexo的matery主题搭建博客</title>
+    <link href="http://zhou39716.github.io/ceshi/"/>
+    <id>http://zhou39716.github.io/ceshi/</id>
+    <published>2020-01-09T08:44:00.000Z</published>
+    <updated>2021-05-10T09:05:13.868Z</updated>
+    
+    <content type="html"><![CDATA[<p>————————————————</p><p>本条测试用</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;————————————————&lt;/p&gt;
+&lt;p&gt;本条测试用&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="工具" scheme="http://zhou39716.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="blog" scheme="http://zhou39716.github.io/tags/blog/"/>
+    
+    <category term="hexo" scheme="http://zhou39716.github.io/tags/hexo/"/>
+    
+  </entry>
+  
 </feed>
