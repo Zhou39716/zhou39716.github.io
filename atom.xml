@@ -44,30 +44,6 @@
   </entry>
   
   <entry>
-    <title>常用命令</title>
-    <link href="http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
-    <published>2021-05-10T05:21:24.000Z</published>
-    <updated>2021-05-10T09:50:49.588Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="ftp上传下载配置"><a href="#ftp上传下载配置" class="headerlink" title="ftp上传下载配置"></a>ftp上传下载配置</h2><pre class="line-numbers language-none"><code class="language-none">ftp ftp服务器地址输入用户名密码bin &#x2F;&#x2F;bin模式put 文件名 &#x2F;&#x2F;上传文件到ftp服务器get 文件名 &#x2F;&#x2F;从ftp服务器下载文件startup saved-configuration flash:&#x2F;文件名  &#x2F;&#x2F;下次启动加载的配置文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="三层交换"><a href="#三层交换" class="headerlink" title="三层交换"></a>三层交换</h2><pre class="line-numbers language-none"><code class="language-none">先创建vlanvlan batch 20 30 40将接口设置类型trunk\acessint g0&#x2F;0&#x2F;1port link type trunkport trunk allow pass vlan 20 30 40    &#x2F;&#x2F;trunk接口允许通过那些vlanint g0&#x2F;0&#x2F;2port link type acessport defult vlan 40     &#x2F;&#x2F;acess接口属于哪个vlanint g0&#x2F;0&#x2F;3vlanif 20                               &#x2F;&#x2F;配置vlani接口ip  vlanif接口id与vlan id 一致ip address  10.10.10.99 24      &#x2F;&#x2F; 外网vlanif 30ip address 30.30.30.55 24     &#x2F;&#x2F;专网vlan if 40 ip address 40.40.40.1 24    &#x2F;&#x2F;内网ip route-static 11.11.11.0  24  30.30.30.55    &#x2F;&#x2F;访问专网路线的走vlan if 30ip route-static  0.0.0.0 0.0.0.0 10.10.10.99   &#x2F;&#x2F;默认路由走外网 vlan if 20dis ip routing-table  &#x2F;&#x2F;查看路由表<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="防火墙常用配置"><a href="#防火墙常用配置" class="headerlink" title="防火墙常用配置"></a>防火墙常用配置</h2><pre class="line-numbers language-none"><code class="language-none">先配置入方向和出方向接口的ipfire zone trust &#x2F;&#x2F;配置安全区域（内网）add int g0&#x2F;0&#x2F;1fire zone untrust &#x2F;&#x2F;配置非安全区域（外网）add int g0&#x2F;0&#x2F;3security-policy &#x2F;&#x2F;配置安全策略trust-untrustrule name outsidesource zone trust  destination zone untrustaction permit &#x2F;&#x2F;放行最后注意是否有回程路由，查看会话表ip route-static 内网ip段 下一跳入方向的对端Ip<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h1&gt;&lt;h2 id=&quot;ftp上传下载配置&quot;&gt;&lt;a href=&quot;#ftp上传下载配置&quot; class=&quot;headerlink&quot; title=</summary>
-      
-    
-    
-    
-    <category term="网络" scheme="http://zhou39716.github.io/categories/%E7%BD%91%E7%BB%9C/"/>
-    
-    
-    <category term="network" scheme="http://zhou39716.github.io/tags/network/"/>
-    
-  </entry>
-  
-  <entry>
     <title>华为交换机基本配置命令详解</title>
     <link href="http://zhou39716.github.io/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/"/>
     <id>http://zhou39716.github.io/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/</id>
@@ -80,6 +56,30 @@
       
       
     <summary type="html">&lt;h1 id=&quot;华为交换机基本配置命令详解&quot;&gt;&lt;a href=&quot;#华为交换机基本配置命令详解&quot; class=&quot;headerlink&quot; title=&quot;华为交换机基本配置命令详解&quot;&gt;&lt;/a&gt;华为交换机基本配置命令详解&lt;/h1&gt;&lt;h2 id=&quot;1、配置文件相关命令&quot;&gt;&lt;a href=&quot;</summary>
+      
+    
+    
+    
+    <category term="网络" scheme="http://zhou39716.github.io/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="network" scheme="http://zhou39716.github.io/tags/network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用命令</title>
+    <link href="http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2021-05-10T05:21:24.000Z</published>
+    <updated>2021-05-10T09:50:49.588Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="ftp上传下载配置"><a href="#ftp上传下载配置" class="headerlink" title="ftp上传下载配置"></a>ftp上传下载配置</h2><pre class="line-numbers language-none"><code class="language-none">ftp ftp服务器地址输入用户名密码bin &#x2F;&#x2F;bin模式put 文件名 &#x2F;&#x2F;上传文件到ftp服务器get 文件名 &#x2F;&#x2F;从ftp服务器下载文件startup saved-configuration flash:&#x2F;文件名  &#x2F;&#x2F;下次启动加载的配置文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="三层交换"><a href="#三层交换" class="headerlink" title="三层交换"></a>三层交换</h2><pre class="line-numbers language-none"><code class="language-none">先创建vlanvlan batch 20 30 40将接口设置类型trunk\acessint g0&#x2F;0&#x2F;1port link type trunkport trunk allow pass vlan 20 30 40    &#x2F;&#x2F;trunk接口允许通过那些vlanint g0&#x2F;0&#x2F;2port link type acessport defult vlan 40     &#x2F;&#x2F;acess接口属于哪个vlanint g0&#x2F;0&#x2F;3vlanif 20                               &#x2F;&#x2F;配置vlani接口ip  vlanif接口id与vlan id 一致ip address  10.10.10.99 24      &#x2F;&#x2F; 外网vlanif 30ip address 30.30.30.55 24     &#x2F;&#x2F;专网vlan if 40 ip address 40.40.40.1 24    &#x2F;&#x2F;内网ip route-static 11.11.11.0  24  30.30.30.55    &#x2F;&#x2F;访问专网路线的走vlan if 30ip route-static  0.0.0.0 0.0.0.0 10.10.10.99   &#x2F;&#x2F;默认路由走外网 vlan if 20dis ip routing-table  &#x2F;&#x2F;查看路由表<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="防火墙常用配置"><a href="#防火墙常用配置" class="headerlink" title="防火墙常用配置"></a>防火墙常用配置</h2><pre class="line-numbers language-none"><code class="language-none">先配置入方向和出方向接口的ipfire zone trust &#x2F;&#x2F;配置安全区域（内网）add int g0&#x2F;0&#x2F;1fire zone untrust &#x2F;&#x2F;配置非安全区域（外网）add int g0&#x2F;0&#x2F;3security-policy &#x2F;&#x2F;配置安全策略trust-untrustrule name outsidesource zone trust  destination zone untrustaction permit &#x2F;&#x2F;放行最后注意是否有回程路由，查看会话表ip route-static 内网ip段 下一跳入方向的对端Ip<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h1&gt;&lt;h2 id=&quot;ftp上传下载配置&quot;&gt;&lt;a href=&quot;#ftp上传下载配置&quot; class=&quot;headerlink&quot; title=</summary>
       
     
     
