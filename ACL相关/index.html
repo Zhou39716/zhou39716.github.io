@@ -468,9 +468,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="ACL相关"><a href="#ACL相关" class="headerlink" title="ACL相关"></a>ACL相关</h1><h2 id="一、什么是ACL访问控制列表"><a href="#一、什么是ACL访问控制列表" class="headerlink" title="一、什么是ACL访问控制列表"></a>一、什么是ACL访问控制列表</h2><div>
-    应用于路由器接口的指令列表，用于指定哪些数据包可以接收转发，哪些数据包需要拒绝，涉及到两个动作：permit（允许）deny（拒绝）
+                <pre class="line-numbers language-none"><code class="language-none">title: ACL相关
+date: 2021-05-10 13:21:24
+tags: network<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
+<h1 id="ACL相关"><a href="#ACL相关" class="headerlink" title="ACL相关"></a>ACL相关</h1><h2 id="一、什么是ACL访问控制列表"><a href="#一、什么是ACL访问控制列表" class="headerlink" title="一、什么是ACL访问控制列表"></a>一、什么是ACL访问控制列表</h2><div>
+    应用于路由器接口的指令列表，用于指定哪些数据包可以接收转发，哪些数据包需要拒绝，涉及到两个动作：permit（允许）deny（拒绝）
 
 <p><br>permit（允许）：数据包过滤，允许那些流量通过</p>
 <p><br>deny（拒绝）：数据包过滤，拒绝那些流量通过</p>
@@ -584,30 +587,36 @@
 <h2 id="十一、ACL的基础配置"><a href="#十一、ACL的基础配置" class="headerlink" title="十一、ACL的基础配置"></a>十一、ACL的基础配置</h2><p>基本ACL的基础配置命令</p>
 <p>创建基本ACL</p>
 <pre class="line-numbers language-none"><code class="language-none">[Huawei] acl [ number ] acl-number [ match-order config ]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>使用编号（2000～2999）创建一个数字型的基本ACL，并进入基本ACL视图。</p>
 <pre class="line-numbers language-none"><code class="language-none">[Huawei] acl name acl-name &#123; basic | acl-number &#125; [ match-order config ]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>使用名称创建一个命名型的基本ACL，并进入基本ACL视图。</p>
 <p>配置基本ACL的规则</p>
 <pre class="line-numbers language-none"><code class="language-none">[Huawei-acl-basic-2000] rule [ rule-id ] &#123; deny | permit &#125; [ source &#123;source-address source-wildcard | any &#125; | time-range time-name ]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>在基本ACL视图下，通过此命令来配置基本ACL的规则。</p>
 <p>高级ACL的基础配置命令</p>
 <p>创建高级ACL</p>
 <pre class="line-numbers language-none"><code class="language-none">[Huawei] acl [ number ] acl-number [ match-order config ]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>使用编号（3000～3999）创建一个数字型的高级ACL，并进入高级ACL视图。</p>
 <pre class="line-numbers language-none"><code class="language-none">[Huawei] acl name acl-name &#123; advance | acl-number &#125; [ match-orderconfig ]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>使用名称创建一个命名型的高级ACL，进入高级ACL视图。</p>
 <p>配置基本ACL的规则</p>
 <p>根据IP承载的协议类型不同，在设备上配置不同的高级ACL规则。对于不同的协议类型，有不同的参数组合。</p>
 <p>当参数protocol为IP时，高级ACL的命令格式为</p>
 <pre class="line-numbers language-none"><code class="language-none">rule [ rule-id ] &#123; deny | permit &#125; ip [ destination &#123;destination-address destination-wildcard | any &#125; | source &#123; source-address
 source-wildcard | any &#125; | time-range time-name | [ dscp dscp | [ tos tos |precedence precedence ] ] ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <p>在高级ACL视图下，通过此命令来配置高级ACL的规则。</p>
 <p>当参数protocol为TCP时，高级ACL的命令格式为</p>
 <pre class="line-numbers language-none"><code class="language-none">rule [ rule-id ] &#123; deny | permit &#125; &#123; protocol-number | tcp &#125; [destination &#123; destination-address destination-wildcard | any &#125; |
 destination-port &#123; eq port | gt port | lt port | range port-start port-end &#125; |source &#123; source-address source-wildcard | any &#125; |
 source-port &#123; eq port | gt port | lt port | range port-start port-end &#125; | tcp-flag &#123; ack | fin | syn &#125; * |time-range time-name ] *<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <p>在高级ACL视图下，通过此命令来配置高级ACL的规则。</p>
-<p><a href="/index.md">首页</a></p>
 
                 
             </div>

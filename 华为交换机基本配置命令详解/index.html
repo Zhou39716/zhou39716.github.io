@@ -468,7 +468,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="华为交换机基本配置命令详解"><a href="#华为交换机基本配置命令详解" class="headerlink" title="华为交换机基本配置命令详解"></a>华为交换机基本配置命令详解</h1><h2 id="1、配置文件相关命令"><a href="#1、配置文件相关命令" class="headerlink" title="1、配置文件相关命令"></a>1、配置文件相关命令</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway]display current-configuration 显示当前生效的配置
+                <pre class="line-numbers language-none"><code class="language-none">title: 华为交换机基本配置命令详解
+date: 2021-05-10 13:21:24
+tags: network<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="华为交换机基本配置命令详解"><a href="#华为交换机基本配置命令详解" class="headerlink" title="华为交换机基本配置命令详解"></a>华为交换机基本配置命令详解</h1><h2 id="1、配置文件相关命令"><a href="#1、配置文件相关命令" class="headerlink" title="1、配置文件相关命令"></a>1、配置文件相关命令</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway]display current-configuration 显示当前生效的配置
 
 [Quidway]display saved-configuration显示flash中配置文件，即下次上电启动时所用的配置文件
 
@@ -489,8 +495,6 @@ display version 显示系统版本信息<span aria-hidden="true" class="line-num
 [Quidway-Vlan-interfacex]ip address10.1.1.11255.255.0.0配置VLAN的IP地址 
 
 [Quidway]ip route-static 0.0.0.0 0.0.0.010.1.1.1 静态路由＝网关<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 
 <h2 id="3、telnet配置"><a href="#3、telnet配置" class="headerlink" title="3、telnet配置"></a>3、telnet配置</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway]user-interface vty 0 4 进入虚拟终端
 
@@ -538,6 +542,7 @@ display version 显示系统版本信息<span aria-hidden="true" class="line-num
 <h2 id="7、VLAN配置"><a href="#7、VLAN配置" class="headerlink" title="7、VLAN配置"></a>7、VLAN配置</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway]vlan4 创建VLAN
 
 [Quidway-vlan4]port ethernet1&#x2F;0&#x2F;1 to ethernet1&#x2F;0&#x2F;4 在VLAN中增加端口<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="①-配置基于access的VLAN"><a href="#①-配置基于access的VLAN" class="headerlink" title="① 配置基于access的VLAN"></a>① 配置基于access的VLAN</h3><pre class="line-numbers language-none"><code class="language-none">[Quidway-Ethernet1&#x2F;0&#x2F;2]port access vlan4 当前端口加入到VLAN 
 注意：缺省情况下，端口的链路类型为Access类型，所有Access端口均属于且只属于VLAN1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
@@ -563,8 +568,7 @@ untagged &#125;允许指定的VLAN通过当前Hybrid端口
 
 [Quidway]undodescription 删除VLAN描述字符 
 
-[Quidway]display vlan [vlan_id] 查看VLAN设置 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+[Quidway]display vlan [vlan_id] 查看VLAN设置 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="⑤-私有VLAN配置"><a href="#⑤-私有VLAN配置" class="headerlink" title="⑤ 私有VLAN配置"></a>⑤ 私有VLAN配置</h3><pre class="line-numbers language-none"><code class="language-none">[Qw_A-vlanx]isolate-user-vlan enable 设置主vlan
 
@@ -577,8 +581,7 @@ untagged &#125;允许指定的VLAN通过当前Hybrid端口
 [Quidway-Ethernet1&#x2F;0&#x2F;2]port hybrid vlan vlan_id_list untagged 设置无标识的vlan
 
 如果包的vlan id与PVId一致，则去掉vlan信息.默认PVID&#x3D;1。
-所以设置PVID为所属vlan id,设置可以互通的vlan为untagged. 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+所以设置PVID为所属vlan id,设置可以互通的vlan为untagged. <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="8、STP配置"><a href="#8、STP配置" class="headerlink" title="8、STP配置"></a>8、STP配置</h2><pre class="line-numbers language-none"><code class="language-none">[Quidway]stp &#123;enable|disable&#125;设置生成树,默认关闭 
 
@@ -602,8 +605,7 @@ untagged &#125;允许指定的VLAN通过当前Hybrid端口
 
 [Sysname-mst-region] revision-level 1
 
-[Sysname-mst-region] active region-configuration 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+[Sysname-mst-region] active region-configuration <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="9、MAC地址表的操作"><a href="#9、MAC地址表的操作" class="headerlink" title="9、MAC地址表的操作"></a>9、MAC地址表的操作</h2><h3 id="①-在系统视图下添加MAC地址表项"><a href="#①-在系统视图下添加MAC地址表项" class="headerlink" title="① 在系统视图下添加MAC地址表项"></a>① 在系统视图下添加MAC地址表项</h3><pre class="line-numbers language-none"><code class="language-none">[Quidway]mac-address &#123; static | dynamic | blackhole &#125;
 mac-address interface interface-type interface-number vlan vlan-id；添加MAC地址表项 在添加MAC地址表项时，命令中interface参数指定的端口必须属于vlan参数指定的VLAN，否则将添加失败。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -615,8 +617,7 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
 <p>如果vlan参数指定的VLAN是动态VLAN，在添加静态MAC地址之后，会自动变为静态VLAN。</p>
 <pre class="line-numbers language-none"><code class="language-none">[Quidway]mac-address timer &#123; aging age | no-aging &#125;设置MAC地址表项的老化时间
 
-注意：缺省情况下，MAC地址表项的老化时间为300秒，使用参数no-aging时表示不对MAC地址表项进行老化。
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+注意：缺省情况下，MAC地址表项的老化时间为300秒，使用参数no-aging时表示不对MAC地址表项进行老化。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="③-MAC地址老化时间的配置对所有端口都生效，但地址老化功能只对动态的（学习到的或者用户配置可老化的）MAC地址表项起作用。"><a href="#③-MAC地址老化时间的配置对所有端口都生效，但地址老化功能只对动态的（学习到的或者用户配置可老化的）MAC地址表项起作用。" class="headerlink" title="③ MAC地址老化时间的配置对所有端口都生效，但地址老化功能只对动态的（学习到的或者用户配置可老化的）MAC地址表项起作用。"></a>③ MAC地址老化时间的配置对所有端口都生效，但地址老化功能只对动态的（学习到的或者用户配置可老化的）MAC地址表项起作用。</h3><pre class="line-numbers language-none"><code class="language-none">[Quidway-Ethernet1&#x2F;0&#x2F;2]mac-address max-mac-count count设置端口最多可以学习到的MAC地址数量；<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -628,11 +629,9 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
 
 [Quidway]display mac-address aging-time         显示地址表动态表项的老化时间 
 
-[Quidway]display port-mac            显示用户配置的以太网端口MAC地址的起始值 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+[Quidway]display port-mac            显示用户配置的以太网端口MAC地址的起始值 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="10、GVRP配置"><a href="#10、GVRP配置" class="headerlink" title="10、GVRP配置"></a>10、GVRP配置</h2><pre class="line-numbers language-none"><code class="language-none">
-[Qw_A] gvrp                 开启全局GVRP 
+<h2 id="10、GVRP配置"><a href="#10、GVRP配置" class="headerlink" title="10、GVRP配置"></a>10、GVRP配置</h2><pre class="line-numbers language-none"><code class="language-none">[Qw_A] gvrp                 开启全局GVRP 
 
 [Qw_A-Ethernet1&#x2F;0&#x2F;1] gvrp     在以太网端口Ethernet1&#x2F;0&#x2F;1上开启GVRP 
 
@@ -646,11 +645,9 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
 
 [Qw_A] display gvrp status                       显示GVRP的全局状态信息 
 
-[Qw_A] display gvrp statusreset garp statistics [ interface interface-list ] 清除GARP统计 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+[Qw_A] display gvrp statusreset garp statistics [ interface interface-list ] 清除GARP统计 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="11、DLDP配置"><a href="#11、DLDP配置" class="headerlink" title="11、DLDP配置"></a>11、DLDP配置</h2><pre class="line-numbers language-none"><code class="language-none">
-[Qw_A] interface gigabitethernet 1&#x2F;1&#x2F;1  
+<h2 id="11、DLDP配置"><a href="#11、DLDP配置" class="headerlink" title="11、DLDP配置"></a>11、DLDP配置</h2><pre class="line-numbers language-none"><code class="language-none">[Qw_A] interface gigabitethernet 1&#x2F;1&#x2F;1  
 
 [Qw_A-GigabitEthernet1&#x2F;1&#x2F;1] duplex full       配置端口工作在强制全双工模式 
 
@@ -666,8 +663,7 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
 [Qw_A] dldp unidirectional-shutdown  &#123; auto | manual &#125;     配置DLDP单向链路操作模式为自动模式。
  缺省为auto 
 
-[Qw_A] display dldp 1          查看DLDP状态。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+[Qw_A] display dldp 1          查看DLDP状态。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>① 当光纤交叉连接时，可能有两个或三个端口处于Disable状态，剩余端口处于Inactive状态。<br>② 当光纤一端连接正确，一端未连接时： <br>如果DLDP的工作模式为normal，则有收光的一端处于Advertisement状态，没有收光的一端处于Inactive状态。<br>如果DLDP的工作模式为enhance，则有收光的一端处于Disable状态，没有收光的一端处于Inactive状态。<br>③ dldp reset命令在全局下可以重置所有端口的DLDP状态，在接口下可以充值该端口的DLDP状态 </p>
 <h2 id="12、端口隔离配置"><a href="#12、端口隔离配置" class="headerlink" title="12、端口隔离配置"></a>12、端口隔离配置</h2><p>① 通过端口隔离特性，用户可以将需要进行控制的端口加入到一个隔离组中，实现隔离组中的端口<br>之间二层、三层数据的隔离，既增强了网络的安全性，也为用户提供了灵活的组网方案。</p>
@@ -695,8 +691,7 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
 [Switch]port-security timer disableport 30       关闭时间为30秒。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="14、端口绑定配置"><a href="#14、端口绑定配置" class="headerlink" title="14、端口绑定配置"></a>14、端口绑定配置</h2><p>通过端口绑定特性，网络管理员可以将用户的MAC地址和IP地址绑定到指定的端口上。进行绑定操作后，交换机只对从该端口收到的指定MAC地址和IP地址的用户发出的报文进行转发，提高了系统的安全性，增强了对网络安全的监控。</p>
-<pre class="line-numbers language-none"><code class="language-none">
-[Qw_A-Ethernet1&#x2F;0&#x2F;1] am user-bind mac-addr 0001-0002-0003 ip-addr 10.12.1.1 
+<pre class="line-numbers language-none"><code class="language-none">[Qw_A-Ethernet1&#x2F;0&#x2F;1] am user-bind mac-addr 0001-0002-0003 ip-addr 10.12.1.1 
 将Host 1的MAC地址和IP地址绑定到Ethernet1&#x2F;0&#x2F;1
 端口。
 有的交换机上绑定的配置不一样 
@@ -715,8 +710,7 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
 设置与DHCP服务器相连的端口Ethernet1&#x2F;0&#x2F;2为信任端口。
 
 [Qw_A-Ethernet1&#x2F;0&#x2F;2] dhcp-snooping trust 
-在端口Ethernet1&#x2F;0&#x2F;1上启用IP过滤功能，防止客户端使用伪造的不同源IP地址对服务器进行攻击 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+在端口Ethernet1&#x2F;0&#x2F;1上启用IP过滤功能，防止客户端使用伪造的不同源IP地址对服务器进行攻击 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="15、BFD配置"><a href="#15、BFD配置" class="headerlink" title="15、BFD配置"></a>15、BFD配置</h2><p>Qw_A、Qw_B、Qw_C相互可达，在Qw_A上配置静态路由可以到达Qw_C，并使能BFD检测功能。<br>① 在Qw_A上配置静态路由，并使能BFD检测功能，通过BFD echo报文方式实现BFD功能。</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;Qw_A&gt; system-view 
@@ -731,8 +725,7 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
 
 [Qw_A-vlan-interface10] quit 
 
-[Qw_A] ip route-static 120.1.1.1 24 10.1.1.100 bfd echo-packet 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+[Qw_A] ip route-static 120.1.1.1 24 10.1.1.100 bfd echo-packet <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>② 在Qw_A上打开BFD功能调试信息开关。</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;Qw_A&gt; debugging bfd event 
@@ -741,63 +734,8 @@ mac-address interface interface-type interface-number vlan vlan-id；添加MAC�
 
 &lt;Qw_A&gt; terminal debugging <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
-
 <p>③ 在Qw_A上可以打开BFD功能调试信息开关，断开Hub和Qw_B之间的链路，验证配置结果。验证结果显示， <br>④ Qw_A能够快速感知Qw_A与Qw_B之间链路的变化。</p>
 <h2 id="16、QinQ配置"><a href="#16、QinQ配置" class="headerlink" title="16、QinQ配置"></a>16、QinQ配置</h2><p>Provider A、Provider B之间通过Trunk端口连接，Provider A属于运营商网络的VLAN1000，Provider B属于运营商网络的VLAN2000。<br>Provider A和Provider B之间，运营商采用其他厂商的设备，TPID值为0x8200。<br>希望配置完成后达到下列要求： <br>Customer A的VLAN10的报文可以和Customer B的VLAN10的报文经过运营商网络的VLAN1000转发后互通；Customer A的VLAN20的报文可以 <br>和Customer C的VLAN20的报文经过运营商网络的VLAN2000转发后互通。</p>
-<pre class="line-numbers language-none"><code class="language-none">
-[ProviderA] interface ethernet 1&#x2F;0&#x2F;1   # 配置端口为Hybrid端口，且允许VLAN10，VLAN20，VLAN1000和VLAN2000的报文通过，并且在发送时去掉外层Tag。
-
-[ProviderA-Ethernet1&#x2F;0&#x2F;1] port link-type hybrid 
-
-[ProviderA-Ethernet1&#x2F;0&#x2F;1] port hybrid vlan 10 20 1000 2000 untagged 
-
-[ProviderA-Ethernet1&#x2F;0&#x2F;1] qinq vid 1000      
- 将来自VLAN10的报文封装VLAN ID为1000的外层Tag。
-[ProviderA-Ethernet1&#x2F;0&#x2F;1-vid-1000] raw-vlan-id inbound 10 
-
-[ProviderA-Ethernet1&#x2F;0&#x2F;1-vid-1000] quit 
-
-[ProviderA-Ethernet1&#x2F;0&#x2F;1] qinq vid 2000    
-  将来自VLAN20的报文封装VLAN ID为2000的外层Tag。
-
-[ProviderA-Ethernet1&#x2F;0&#x2F;1-vid-2000] raw-vlan-id inbound 20 
-
-[ProviderA] interface ethernet 1&#x2F;0&#x2F;2    配置端口的缺省VLAN为VLAN1000。
-
-[ProviderA-Ethernet1&#x2F;0&#x2F;2] port access vlan 1000 [ProviderA-Ethernet1&#x2F;0&#x2F;2] qinq enable    
- 配置端口的基本QinQ功能，将来自VLAN10的报文封装VLAN ID为1000的外层Tag。
-
-[ProviderA] interface ethernet 1&#x2F;0&#x2F;3    
-   配置端口为Trunk端口，且允许VLAN1000和VLAN2000的报文通过。
-
-[ProviderA-Ethernet1&#x2F;0&#x2F;3] port link-type trunk 
-
-[ProviderA-Ethernet1&#x2F;0&#x2F;3] port trunk permit vlan 1000 2000 
-
-[ProviderA-Ethernet1&#x2F;0&#x2F;3] qinq ethernet-type 8200    
-  为与公共网络中的设备进行互通，配置端口添加外层Tag时采用的TPID值为0x8200。
-
-[ProviderB] interface ethernet 1&#x2F;0&#x2F;1    
-   配置端口为Trunk端口，且允许VLAN1000和VLAN2000的报文通过。
-
-[ProviderB-Ethernet1&#x2F;0&#x2F;1] port link-type trunk 
-
-[ProviderB-Ethernet1&#x2F;0&#x2F;1] port trunk permit vlan 1000 2000 
-
-[ProviderB-Ethernet1&#x2F;0&#x2F;1] qinq ethernet-type 8200    
- 为与公共网络中的设备进行互通，配置端口添加外层Tag时采用的TPID值为0x8200。
-
-[ProviderB] interface ethernet 1&#x2F;0&#x2F;2   # 配置端口的缺省VLAN为VLAN2000。
-
-[ProviderB-Ethernet1&#x2F;0&#x2F;2] port access vlan 2000 
-
-[ProviderB-Ethernet1&#x2F;0&#x2F;2] qinq enable    
- 配置端口的基本QinQ功能，将来自VLAN20的报文封装VLAN ID为2000的外层Tag。
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><a href="/index.md">回到首页</a></p>
 
                 
             </div>
