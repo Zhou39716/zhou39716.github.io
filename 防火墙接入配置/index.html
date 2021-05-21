@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="常用软件, 笔记">
+    <meta name="keywords" content="笔记">
     <meta name="description" content="blog for me">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>常用软件 | abrus.cc</title>
+    <title>abrus.cc</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -245,12 +245,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">常用软件</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -364,29 +364,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/soft/">
-                                <span class="chip bg-color">soft</span>
-                            </a>
-                        
-                            <a href="/tags/pc/">
-                                <span class="chip bg-color">pc</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/pc/" class="post-category">
-                                pc
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -395,7 +378,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-10
+                    2021-05-21
                 </div>
                 
 
@@ -419,60 +402,128 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h1><table>
+                <pre class="line-numbers language-none"><code class="language-none">title: 防火墙基本配置1（静态IPv4接入）
+date: 2021-5-21 19:05:23
+author: ben
+categories: 防火墙  
+summary: 防火墙基本配置1（静态IPv4接入） 
+tags:
+
+- 防火墙
+- 网络<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="防火墙基本配置1（静态IPv4接入）"><a href="#防火墙基本配置1（静态IPv4接入）" class="headerlink" title="防火墙基本配置1（静态IPv4接入）"></a>防火墙基本配置1（静态IPv4接入）</h1><h2 id="1、通过静态IPv4-地址接入互联网"><a href="#1、通过静态IPv4-地址接入互联网" class="headerlink" title="1、通过静态IPv4 地址接入互联网"></a>1、通过静态IPv4 地址接入互联网</h2><p>设备使用静态IPv4地址接入Internet，并为内部网络提供网络访问服务。<br>组网需求<br>如图4-1所示，某企业在网络边界处部署了FW作为安全网关，并从运营商处购买了宽<br>带上网服务，实现内部网络接入Internet的需求。<br>具体需求如下：</p>
+<ul>
+<li><p>内部网络中的PC使用私网网段10.3.0.0/24实现互通，要求由FW为PC分配私网地<br>址、DNS Server地址等网络参数，减少管理员手工配置的劳动量。</p>
+</li>
+<li><p>内部网络中的PC可以访问Internet。</p>
+</li>
+</ul>
+<p>图1-1 以太网链路接入Internet 组网图<img src="%5Cimg%5C2021-05-21-19-20-20-image.png"></p>
+<p>本举例中假设某企业从运营商获取了如下信息，这些信息仅供举例使用，实际配置时<br>请从当地运营商获取。</p>
+<p>|项目|</p>
+<table>
 <thead>
 <tr>
-<th align="center">名称</th>
-<th align="left">介绍</th>
-<th align="center">下载地址</th>
+<th>项目</th>
+<th>数据</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">Motrix</td>
-<td align="left">一款很好用的多线程下载软件</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://motrix.app/">https://motrix.app/</a></td>
+<td>地址</td>
+<td>1.1.1.1/24</td>
+<td>运营商分配给企业的公网地址。</td>
 </tr>
 <tr>
-<td align="center">7zip</td>
-<td align="left">体积下，无广告的压缩解压软件</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://sparanoid.com/lab/7z/">https://sparanoid.com/lab/7z/</a></td>
+<td>默认网关</td>
+<td>1.1.1.254</td>
+<td>运营商提供的默认网关。</td>
 </tr>
 <tr>
-<td align="center">Violentmonkey</td>
-<td align="left">一款好用的浏览器扩展工具</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://violentmonkey.github.io/">https://violentmonkey.github.io/</a></td>
-</tr>
-<tr>
-<td align="center">Adobe软件</td>
-<td align="left">全系列，解压密码:  @vposy</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1_rP3F1pgi598vR8hDDJOEA">度盘链接</a> 提取码：xc91</td>
-</tr>
-<tr>
-<td align="center">CAD2004-2020</td>
-<td align="left"></td>
-<td align="center"><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1PCEG_IoRYNyI4piuyAkIig">度盘链接</a> 提取码：4ivk</td>
-</tr>
-<tr>
-<td align="center">vc运行库</td>
-<td align="left">VC2005-2019</td>
-<td align="center"><a target="_blank" rel="noopener" href="http://yd.shanbotv.com:8686/lmsrc/scku/Scku.exe">下载地址</a></td>
-</tr>
-<tr>
-<td align="center">.net 3.5</td>
-<td align="left"></td>
-<td align="center"><a target="_blank" rel="noopener" href="https://xa189cloud.oos-snxa.ctyunapi.cn/3e180290-5006-4a54-8358-b46f44f6114e?response-content-disposition=attachment;filename=%22NETFramework2.0_3.0_3.5x862014511.zip%22&x-amz-CLIENTNETWORK=UNKNOWN&x-amz-CLOUDTYPEIN=PERSON&x-amz-CLIENTTYPEIN=WEB&Signature=Dz20nvfjOXVwaceKftrsE1M4N+Q=&AWSAccessKeyId=c947570364056574cccc&Expires=1620652348&x-amz-limitrate=128000&x-amz-FSIZE=38499930&x-amz-UID=208990395&x-amz-UFID=81434112270166334">下载地址</a></td>
-</tr>
-<tr>
-<td align="center">.net4.5</td>
-<td align="left"></td>
-<td align="center"><a target="_blank" rel="noopener" href="https://xa189cloud.oos-snxa.ctyunapi.cn/e845a8b1-1be6-4ca8-9214-178ef7cf0d4f?response-content-disposition=attachment;filename=%22NETFramework_4.5.2ALL_2014511.zip%22&x-amz-CLIENTNETWORK=UNKNOWN&x-amz-CLOUDTYPEIN=PERSON&x-amz-CLIENTTYPEIN=WEB&Signature=xk88bq/kYfFSut4YyOCYDajLdIo=&AWSAccessKeyId=c947570364056574cccc&Expires=1620652550&x-amz-limitrate=128000&x-amz-FSIZE=78060486&x-amz-UID=208990395&x-amz-UFID=11306112736824049">下载地址</a></td>
-</tr>
-<tr>
-<td align="center">todesk</td>
-<td align="left">一款好用免费的远程软件</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://www.todesk.com/">https://www.todesk.com</a></td>
+<td>DNS Server地址</td>
+<td>9.9.9.9</td>
+<td>运营商提供的DNS Server地址。</td>
 </tr>
 </tbody></table>
+<h3 id="配置思路"><a href="#配置思路" class="headerlink" title="配置思路"></a>配置思路</h3><ol>
+<li>配置接口的IP地址，并将接口加入相应的安全区域。</li>
+<li>配置FW作为DHCP Server，为内部网络中的PC分配IP地址和DNS Server地址。</li>
+<li>配置安全策略，允许内部网络中的PC访问Internet。</li>
+<li>配置NAT策略，提供源地址转换功能。由于使用运营商分配的固定公网地址作为<br>转换后的地址，故采用Easy IP方式的NAT策略，简化配置。</li>
+<li>在运营商网络的设备上配置回程路由，该配置由运营商完成，本举例中不作介<br>绍。</li>
+</ol>
+<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="步骤1-配置各个接口IP地址并将其加入对应的安全区域。"><a href="#步骤1-配置各个接口IP地址并将其加入对应的安全区域。" class="headerlink" title="步骤1 配置各个接口IP地址并将其加入对应的安全区域。"></a>步骤1 配置各个接口IP地址并将其加入对应的安全区域。</h4><p><FW> system-view<br>[FW] interface GigabitEthernet 1/0/1<br>[FW-GigabitEthernet1/0/1] ip address 1.1.1.1 255.255.255.0<br>[FW-GigabitEthernet1/0/1] quit<br>[FW] interface GigabitEthernet 1/0/3<br>[FW-GigabitEthernet1/0/3] ip address 10.3.0.1 255.255.255.0<br>[FW-GigabitEthernet1/0/3] quit<br>[FW] firewall zone untrust<br>[FW-zone-untrust] add interface GigabitEthernet 1/0/1<br>[FW-zone-untrust] quit<br>[FW] firewall zone trust<br>[FW-zone-trust] add interface GigabitEthernet 1/0/3<br>[FW-zone-trust] quit<br>步骤2 配置FW作为DHCP Server。</p>
+<h4 id="开启DHCP功能。"><a href="#开启DHCP功能。" class="headerlink" title="开启DHCP功能。"></a>开启DHCP功能。</h4><p>[FW] dhcp enable</p>
+<h4 id="创建接口地址池并为内网PC配置网关地址和DNS-Server地址。"><a href="#创建接口地址池并为内网PC配置网关地址和DNS-Server地址。" class="headerlink" title="创建接口地址池并为内网PC配置网关地址和DNS Server地址。"></a>创建接口地址池并为内网PC配置网关地址和DNS Server地址。</h4><pre class="line-numbers language-none"><code class="language-none">[FW] interface GigabitEthernet 1&#x2F;0&#x2F;3
+[FW-GigabitEthernet1&#x2F;0&#x2F;3] dhcp select interface
+[FW-GigabitEthernet1&#x2F;0&#x2F;3] dhcp server dns-list 9.9.9.9
+[FW-GigabitEthernet1&#x2F;0&#x2F;3] dhcp server gateway-list 10.3.0.1
+[FW-GigabitEthernet1&#x2F;0&#x2F;3] quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="步骤3-配置安全策略，允许内部网络中的PC访问Internet。"><a href="#步骤3-配置安全策略，允许内部网络中的PC访问Internet。" class="headerlink" title="步骤3 配置安全策略，允许内部网络中的PC访问Internet。"></a>步骤3 配置安全策略，允许内部网络中的PC访问Internet。</h4><pre class="line-numbers language-none"><code class="language-none">[FW] security-policy
+[FW-security-policy] rule name policy_sec_1
+[FW-security-policy-sec_policy_1] source-address 10.3.0.0 mask 255.255.255.0
+[FW-security-policy-sec_policy_1] source-zone trust
+[FW-security-policy-sec_policy_1] destination-zone untrust
+[FW-security-policy-sec_policy_1] action permit
+[FW-security-policy-sec_policy_1] quit
+[FW-security-policy] quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="步骤4-配置NAT策略，当内部网络中的PC访问Internet时进行地址转换。"><a href="#步骤4-配置NAT策略，当内部网络中的PC访问Internet时进行地址转换。" class="headerlink" title="步骤4 配置NAT策略，当内部网络中的PC访问Internet时进行地址转换。"></a>步骤4 配置NAT策略，当内部网络中的PC访问Internet时进行地址转换。</h4><pre class="line-numbers language-none"><code class="language-none">[FW] nat-policy
+[FW-policy-nat] rule name policy_nat_1
+[FW-policy-nat-rule-policy_nat_1] source-address 10.3.0.0 mask 255.255.255.0
+[FW-policy-nat-rule-policy_nat_1] source-zone trust
+[FW-policy-nat-rule-policy_nat_1] egress-interface GigabitEthernet 1&#x2F;0&#x2F;1
+[FW-policy-nat-rule-policy_nat_1] action nat easy-ip
+[FW-policy-nat-rule-policy_nat_1] quit
+[FW-policy-nat] quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="步骤5-配置缺省路由，指定下一跳地址为1-1-1-254。"><a href="#步骤5-配置缺省路由，指定下一跳地址为1-1-1-254。" class="headerlink" title="步骤5 配置缺省路由，指定下一跳地址为1.1.1.254。"></a>步骤5 配置缺省路由，指定下一跳地址为1.1.1.254。</h4><pre class="line-numbers language-none"><code class="language-none">[FW] ip route-static 0.0.0.0 0.0.0.0 1.1.1.254<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="完整配置"><a href="#完整配置" class="headerlink" title="完整配置"></a>完整配置</h4><pre class="line-numbers language-none"><code class="language-none">#
+dhcp enable
+#
+interface GigabitEthernet1&#x2F;0&#x2F;1
+undo shutdown
+ip address 1.1.1.1 255.255.255.0
+#
+interface GigabitEthernet1&#x2F;0&#x2F;3
+undo shutdown
+ip address 10.3.0.1 255.255.255.0
+dhcp select interface
+dhcp server ip-range 10.3.0.1 10.3.0.254
+dhcp server gateway-list 10.3.0.1
+dhcp server dns-list 9.9.9.9
+#
+firewall zone trust
+set priority 85
+add interface GigabitEthernet1&#x2F;0&#x2F;3  
+#
+firewall zone untrust
+set priority 5
+add interface GigabitEthernet1&#x2F;0&#x2F;1
+#
+ip route-static 0.0.0.0 0.0.0.0 1.1.1.254
+#
+security-policy
+rule name policy_sec_1
+source-zone trust
+destination-zone untrust
+source-address 10.3.0.0 24
+action permit
+#
+nat-policy
+rule name policy_nat_1
+source-zone trust
+egress-interface GigabitEthernet1&#x2F;0&#x2F;1
+source-address 10.3.0.0 24
+action nat easy-ip
+#
+return<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>查看接口GigabitEthernet 1/0/1的详细信息，检查其公网地址配置是否正确，物理状<br>态和IPv4状态是否均为Up。  </p>
+<pre class="line-numbers language-none"><code class="language-none">[FW] display interface GigabitEthernet 1&#x2F;0&#x2F;1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
                 
             </div>
@@ -489,7 +540,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">ben</a>
+                    <a href="/about" rel="external nofollow noreferrer">abrus</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -499,7 +550,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/">http://zhou39716.github.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</a>
+                    <a href="http://zhou39716.github.io/%E9%98%B2%E7%81%AB%E5%A2%99%E6%8E%A5%E5%85%A5%E9%85%8D%E7%BD%AE/">http://zhou39716.github.io/%E9%98%B2%E7%81%AB%E5%A2%99%E6%8E%A5%E5%85%A5%E9%85%8D%E7%BD%AE/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -512,7 +563,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">ben</a>
+                    <a href="/about" target="_blank">abrus</a>
                     !
                 </span>
             </div>
@@ -536,15 +587,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/soft/">
-                                    <span class="chip bg-color">soft</span>
-                                </a>
-                            
-                                <a href="/tags/pc/">
-                                    <span class="chip bg-color">pc</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -712,9 +755,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/%E9%98%B2%E7%81%AB%E5%A2%99%E6%8E%A5%E5%85%A5%E9%85%8D%E7%BD%AE/">
                     <div class="card-image">
@@ -732,9 +776,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -743,6 +787,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -753,19 +798,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/">
+                <a href="/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="华为交换机基本配置命令详解">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="常用软件">
                         
-                        <span class="card-title">华为交换机基本配置命令详解</span>
+                        <span class="card-title">常用软件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            常用软件
                         
                     </div>
                     <div class="publish-info">
@@ -776,8 +821,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    网络
+                            <a href="/categories/pc/" class="post-category">
+                                    pc
                                 </a>
                             
                             
@@ -787,8 +832,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">网络</span>
+                    <a href="/tags/soft/">
+                        <span class="chip bg-color">soft</span>
+                    </a>
+                    
+                    <a href="/tags/pc/">
+                        <span class="chip bg-color">pc</span>
                     </a>
                     
                 </div>
