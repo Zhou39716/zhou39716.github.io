@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="笔记">
+    <meta name="keywords" content="防火墙基本配置1（静态IPv4接入）, 笔记">
     <meta name="description" content="blog for me">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>abrus.cc</title>
+    <title>防火墙基本配置1（静态IPv4接入） | abrus.cc</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -245,12 +245,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">防火墙基本配置1（静态IPv4接入）</h1>
                 </div>
             </div>
         </div>
@@ -364,12 +364,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                                <span class="chip bg-color">网络</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/">
+                                <span class="chip bg-color">防火墙</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%98%B2%E7%81%AB%E5%A2%99/" class="post-category">
+                                防火墙
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -402,17 +419,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class="line-numbers language-none"><code class="language-none">title: 防火墙基本配置1（静态IPv4接入）
-date: 2021-5-21 19:05:23
-author: ben
-categories: 防火墙  
-summary: 防火墙基本配置1（静态IPv4接入） 
-tags:
-
-- 防火墙
-- 网络<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="防火墙基本配置1（静态IPv4接入）"><a href="#防火墙基本配置1（静态IPv4接入）" class="headerlink" title="防火墙基本配置1（静态IPv4接入）"></a>防火墙基本配置1（静态IPv4接入）</h1><h2 id="1、通过静态IPv4-地址接入互联网"><a href="#1、通过静态IPv4-地址接入互联网" class="headerlink" title="1、通过静态IPv4 地址接入互联网"></a>1、通过静态IPv4 地址接入互联网</h2><p>设备使用静态IPv4地址接入Internet，并为内部网络提供网络访问服务。<br>组网需求<br>如图4-1所示，某企业在网络边界处部署了FW作为安全网关，并从运营商处购买了宽<br>带上网服务，实现内部网络接入Internet的需求。<br>具体需求如下：</p>
+                <h1 id="防火墙基本配置1（静态IPv4接入）"><a href="#防火墙基本配置1（静态IPv4接入）" class="headerlink" title="防火墙基本配置1（静态IPv4接入）"></a>防火墙基本配置1（静态IPv4接入）</h1><h2 id="1、通过静态IPv4-地址接入互联网"><a href="#1、通过静态IPv4-地址接入互联网" class="headerlink" title="1、通过静态IPv4 地址接入互联网"></a>1、通过静态IPv4 地址接入互联网</h2><p>设备使用静态IPv4地址接入Internet，并为内部网络提供网络访问服务。<br>组网需求<br>如图4-1所示，某企业在网络边界处部署了FW作为安全网关，并从运营商处购买了宽<br>带上网服务，实现内部网络接入Internet的需求。<br>具体需求如下：</p>
 <ul>
 <li><p>内部网络中的PC使用私网网段10.3.0.0/24实现互通，要求由FW为PC分配私网地<br>址、DNS Server地址等网络参数，减少管理员手工配置的劳动量。</p>
 </li>
@@ -540,7 +547,7 @@ return<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">abrus</a>
+                    <a href="/about" rel="external nofollow noreferrer">ben</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -563,7 +570,7 @@ return<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">abrus</a>
+                    <a href="/about" target="_blank">ben</a>
                     !
                 </span>
             </div>
@@ -587,7 +594,15 @@ return<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                                    <span class="chip bg-color">网络</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/">
+                                    <span class="chip bg-color">防火墙</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -764,15 +779,15 @@ return<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="防火墙基本配置1（静态IPv4接入）">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">防火墙基本配置1（静态IPv4接入）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            防火墙基本配置1（静态IPv4接入）
                         
                     </div>
                     <div class="publish-info">
@@ -781,13 +796,29 @@ return<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            abrus
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%98%B2%E7%81%AB%E5%A2%99/" class="post-category">
+                                    防火墙
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">网络</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/">
+                        <span class="chip bg-color">防火墙</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
