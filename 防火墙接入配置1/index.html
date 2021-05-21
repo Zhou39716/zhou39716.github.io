@@ -459,9 +459,25 @@
 <li>配置NAT策略，提供源地址转换功能。由于使用运营商分配的固定公网地址作为<br>转换后的地址，故采用Easy IP方式的NAT策略，简化配置。</li>
 <li>在运营商网络的设备上配置回程路由，该配置由运营商完成，本举例中不作介<br>绍。</li>
 </ol>
-<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="步骤1-配置各个接口IP地址并将其加入对应的安全区域。"><a href="#步骤1-配置各个接口IP地址并将其加入对应的安全区域。" class="headerlink" title="步骤1 配置各个接口IP地址并将其加入对应的安全区域。"></a>步骤1 配置各个接口IP地址并将其加入对应的安全区域。</h4><p><FW> system-view<br>[FW] interface GigabitEthernet 1/0/1<br>[FW-GigabitEthernet1/0/1] ip address 1.1.1.1 255.255.255.0<br>[FW-GigabitEthernet1/0/1] quit<br>[FW] interface GigabitEthernet 1/0/3<br>[FW-GigabitEthernet1/0/3] ip address 10.3.0.1 255.255.255.0<br>[FW-GigabitEthernet1/0/3] quit<br>[FW] firewall zone untrust<br>[FW-zone-untrust] add interface GigabitEthernet 1/0/1<br>[FW-zone-untrust] quit<br>[FW] firewall zone trust<br>[FW-zone-trust] add interface GigabitEthernet 1/0/3<br>[FW-zone-trust] quit<br>步骤2 配置FW作为DHCP Server。</p>
-<h4 id="开启DHCP功能。"><a href="#开启DHCP功能。" class="headerlink" title="开启DHCP功能。"></a>开启DHCP功能。</h4><p>[FW] dhcp enable</p>
-<h4 id="创建接口地址池并为内网PC配置网关地址和DNS-Server地址。"><a href="#创建接口地址池并为内网PC配置网关地址和DNS-Server地址。" class="headerlink" title="创建接口地址池并为内网PC配置网关地址和DNS Server地址。"></a>创建接口地址池并为内网PC配置网关地址和DNS Server地址。</h4><pre class="line-numbers language-none"><code class="language-none">[FW] interface GigabitEthernet 1&#x2F;0&#x2F;3
+<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="步骤1-配置各个接口IP地址并将其加入对应的安全区域。"><a href="#步骤1-配置各个接口IP地址并将其加入对应的安全区域。" class="headerlink" title="步骤1 配置各个接口IP地址并将其加入对应的安全区域。"></a>步骤1 配置各个接口IP地址并将其加入对应的安全区域。</h4><pre class="line-numbers language-none"><code class="language-none">&lt;FW&gt; system-view
+[FW] interface GigabitEthernet 1&#x2F;0&#x2F;1
+[FW-GigabitEthernet1&#x2F;0&#x2F;1] ip address 1.1.1.1 255.255.255.0
+[FW-GigabitEthernet1&#x2F;0&#x2F;1] quit
+[FW] interface GigabitEthernet 1&#x2F;0&#x2F;3
+[FW-GigabitEthernet1&#x2F;0&#x2F;3] ip address 10.3.0.1 255.255.255.0
+[FW-GigabitEthernet1&#x2F;0&#x2F;3] quit
+[FW] firewall zone untrust
+[FW-zone-untrust] add interface GigabitEthernet 1&#x2F;0&#x2F;1
+[FW-zone-untrust] quit
+[FW] firewall zone trust
+[FW-zone-trust] add interface GigabitEthernet 1&#x2F;0&#x2F;3
+[FW-zone-trust] quit  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="步骤2-配置FW作为DHCP-Server。"><a href="#步骤2-配置FW作为DHCP-Server。" class="headerlink" title="步骤2 配置FW作为DHCP Server。"></a>步骤2 配置FW作为DHCP Server。</h4><p>开启DHCP功能。</p>
+<pre class="line-numbers language-none"><code class="language-none">[FW] dhcp enable<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>创建接口地址池并为内网PC配置网关地址和DNS Server地址。</p>
+<pre class="line-numbers language-none"><code class="language-none">[FW] interface GigabitEthernet 1&#x2F;0&#x2F;3
 [FW-GigabitEthernet1&#x2F;0&#x2F;3] dhcp select interface
 [FW-GigabitEthernet1&#x2F;0&#x2F;3] dhcp server dns-list 9.9.9.9
 [FW-GigabitEthernet1&#x2F;0&#x2F;3] dhcp server gateway-list 10.3.0.1
