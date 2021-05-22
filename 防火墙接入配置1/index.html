@@ -473,6 +473,7 @@
 [FW-zone-trust] add interface GigabitEthernet 1&#x2F;0&#x2F;3
 [FW-zone-trust] quit  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p><img src="/img/2021-05-22-15-28-19-image.png"></p>
 <h4 id="步骤2-配置FW作为DHCP-Server。"><a href="#步骤2-配置FW作为DHCP-Server。" class="headerlink" title="步骤2 配置FW作为DHCP Server。"></a>步骤2 配置FW作为DHCP Server。</h4><p>开启DHCP功能。</p>
 <pre class="line-numbers language-none"><code class="language-none">[FW] dhcp enable<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -483,6 +484,7 @@
 [FW-GigabitEthernet1&#x2F;0&#x2F;3] dhcp server gateway-list 10.3.0.1
 [FW-GigabitEthernet1&#x2F;0&#x2F;3] quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p><img src="/img/2021-05-22-15-30-28-image.png"></p>
 <h4 id="步骤3-配置安全策略，允许内部网络中的PC访问Internet。"><a href="#步骤3-配置安全策略，允许内部网络中的PC访问Internet。" class="headerlink" title="步骤3 配置安全策略，允许内部网络中的PC访问Internet。"></a>步骤3 配置安全策略，允许内部网络中的PC访问Internet。</h4><pre class="line-numbers language-none"><code class="language-none">[FW] security-policy
 [FW-security-policy] rule name policy_sec_1
 [FW-security-policy-sec_policy_1] source-address 10.3.0.0 mask 255.255.255.0
@@ -492,6 +494,7 @@
 [FW-security-policy-sec_policy_1] quit
 [FW-security-policy] quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p><img src="/img/2021-05-22-15-32-32-image.png"></p>
 <h4 id="步骤4-配置NAT策略，当内部网络中的PC访问Internet时进行地址转换。"><a href="#步骤4-配置NAT策略，当内部网络中的PC访问Internet时进行地址转换。" class="headerlink" title="步骤4 配置NAT策略，当内部网络中的PC访问Internet时进行地址转换。"></a>步骤4 配置NAT策略，当内部网络中的PC访问Internet时进行地址转换。</h4><pre class="line-numbers language-none"><code class="language-none">[FW] nat-policy
 [FW-policy-nat] rule name policy_nat_1
 [FW-policy-nat-rule-policy_nat_1] source-address 10.3.0.0 mask 255.255.255.0
@@ -501,6 +504,7 @@
 [FW-policy-nat-rule-policy_nat_1] quit
 [FW-policy-nat] quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p><img src="/img/2021-05-22-15-33-15-image.png"></p>
 <h4 id="步骤5-配置缺省路由，指定下一跳地址为1-1-1-254。"><a href="#步骤5-配置缺省路由，指定下一跳地址为1-1-1-254。" class="headerlink" title="步骤5 配置缺省路由，指定下一跳地址为1.1.1.254。"></a>步骤5 配置缺省路由，指定下一跳地址为1.1.1.254。</h4><pre class="line-numbers language-none"><code class="language-none">[FW] ip route-static 0.0.0.0 0.0.0.0 1.1.1.254<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="完整配置"><a href="#完整配置" class="headerlink" title="完整配置"></a>完整配置</h4><pre class="line-numbers language-none"><code class="language-none">#
